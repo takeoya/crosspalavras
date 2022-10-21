@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        matriz = new Array;
+        matriz = 
+        [   
+            
+            ["","B","L","U","E","L","O","C","K","","","","","",""],
+            ["","","","","","","","H","","","","","","S",""],
+            ["B","","","","","","","A","","","","","","P",""],
+            ["","L","","","","","K","I","M","E","T","S","U","Y",""],
+            ["","","E","","","","","N","","","","","","X",""],
+            ["","","","A","","","","S","","","","","","F",""],
+            ["","","","","C","","","A","","K","","","","A",""],
+            ["","","","","","H","","W","","O","A","","","M",""],
+            ["","","","","","","","","","M","","G","","I",""],
+            ["","","","","","","","","","I","","","U","L",""],
+            ["M","O","B","P","S","Y","C","H","O","S","","","","Y",""],
+            ["","","","","","","","","","A","","","","","A"],
+            ["","","","","","","","","","N","","","","",""],
+            ["","","","","","","","","","","","","","",""],
+            ["S","H","I","N","G","E","K","I","","","","","","",""],
+        ];
+
+        window.onload = function(){
+            for(let node of document.querySelectorAll("td")){
+                if(node.textContent != ""){
+                    node.className = "selected";
+                }
+                else{
+                    let charcode = Math.round(65 + Math.random() * 25)
+                    node.textContent = String.fromCharCode(charcode)
+                }
+            }
+        }
+
+        document.write("<h1>アニメ(Anime) 2022 Shows</h1>" + 
+        "<div class='shows'><div class='cont'><div class='names'><p><b>Spy x Family<br>Chainsaw Man<br>Bleach</b></p></div>"+
+        "<div class='names'><p><b>Shingeki no Kyoji<br>Sono Bisque<br>Kimetsu No Yaiba</b></p></div>"+
+        "<div class='names'><p><b>Kaguya<br>Blue Lock<br>Komi San</b></p></div></div></div><br><br>" + 
+        "<table border='2' align='center'>");
+        for (l= 0; l< 15; l++){
+            document.write("<tr>")
+            for(c=0; c<15; c++){
+                document.write("<td>" + matriz[l][c] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script>
+
+</body>
+</html>
